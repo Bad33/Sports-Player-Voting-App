@@ -1,0 +1,17 @@
+
+<table class="table table-striped" >
+  <thead>
+    <tr>
+        <th scope="col">#</th>
+      <th scope="col">Player</th>
+      <th scope="col">Vote Count</th>
+    </tr>
+  </thead>
+  <tbody [(ngModel)]="playerData">
+    <tr *ngFor="let i of playerData;let j = index">
+        <td>{{j+1}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.votes}}</td>
+    </tr>
+  </tbody>
+</table>

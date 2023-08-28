@@ -1,0 +1,74 @@
+div {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  
+    ul {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      justify-content: center;
+  
+      li {
+        padding: 20px;
+  
+        img {
+          width: 220px;
+          height: 220px;
+          border-radius: 50%;
+          box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.1);
+ 
+          border: 4px solid rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+  
+          &.elect {
+            border: 3px solid rgb(204, 54, 54);
+            box-shadow: 0 4px 7px 1px rgba(0, 0, 0, 0.1);
+            border: 5px solid rgb(4, 156, 226);
+            cursor: default;
+          }
+  
+          &.lost {
+            box-shadow: unset;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+  
+            &:hover {
+     
+           
+              cursor: default;
+            }
+          }
+  
+          &:hover {
+            border: 5px solid rgb(4, 156, 226);
+          }
+        }
+  
+        h4 {
+          font-size: 16px;
+          opacity: 0.9;
+          margin-bottom: 8px;
+          font-weight: lighter;
+        }
+  
+        p {
+          font-size: 14px;
+          opacity: 0.6;
+          font-weight: bold;
+          margin: 4px 0;
+        }
+      }
+    }
+  }
+#VotingResults {
+  height: 830px;
+  width: 1000px;
+  // margin: 500px 0 500px 0;
+}
+
+.space {
+  height: 100px;
+}
+.leaderboard {
+  margin-top: 100px;
+}

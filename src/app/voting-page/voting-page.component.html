@@ -1,0 +1,38 @@
+<div>
+  <br>
+
+  <h1 [ngStyle]="{'color':'aquamarine'}">SIEMENS PPL</h1><h5>Organized by DAAC</h5>
+  
+    <h2>Vote for your Player of the season</h2>
+    <br>
+    <ul [(ngModel)]="playerData">
+      <li *ngFor="let player of playerData">
+        <a href="/#VotingResults"><img [src]="player.image" [alt]="player.name" (click)="castVote(player.shortName)"  [ngClass]="getVoteClasses(player.shortName)"></a>
+        <h4>{{player.name}}</h4>
+        <p>{{player.goals}} goals</p>
+        <p>{{player.assists}} assists</p>
+        <p>{{player.votes}} Vote Count</p>
+      </li>
+
+
+    </ul>
+    <div class="leaderboard">
+      <a href="/#leaderboard"><ix-button primary outline class="m-1">Leaderboard</ix-button></a>
+    </div><br><br><br><br>
+<div class="space"></div>
+  
+    <div id='VotingResults' *ngIf="voted" >
+   
+      <canvasjs-chart  [options]="chartOptions" [styles]="{width: '100%', height:'100%'}"></canvasjs-chart>  
+
+  </div>
+
+  <div class="space"></div>
+  <div id="leaderboard">
+  <app-leaderboard [playerData] = "playerData">
+    </app-leaderboard>
+
+  </div>
+
+
+</div>
